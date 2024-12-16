@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="clock-container">
+        <div class="time-zone-selector">
+            <label for="timezone">Choose The Time Zone:</label>
+            <select id="timezone">
+                <!-- Option group for Themes -->
+                <optgroup label="Themes">
+                    <option value="light">Light Theme</option>
+                    <option value="dark">Dark Theme</option>
+                    <option value="colorful">Rainbow Theme</option>
+                </optgroup>
+                
+                <!-- Option group for Time Zones -->
+                <optgroup label="Time Zones">
+                    <!-- Time zones will be populated here by JavaScript -->
+                </optgroup>
+            </select>
+        </div>
+        <div class="clock">
+            <span id="time"></span>
+        </div>
+        <div class="date">
+            <span id="date"></span>
+        </div>
+        <div class="country">
+            <span id="country"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

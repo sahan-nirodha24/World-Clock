@@ -1,0 +1,148 @@
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out; 
+}
+
+/* Clock Container */
+.clock-container {
+    text-align: center;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    width: 95%;
+    max-width: 400px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.clock-container:hover {
+    transform: scale(1.05);
+}
+
+/* Time Zone Selector */
+.time-zone-selector {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #f9f9f9;
+    transition: color 0.5s ease-in-out;
+}
+
+select {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    background: #ffffff;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+select:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from { box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+    to { box-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+}
+
+/* Dynamic Theme Colors */
+body.light-theme {
+    background: linear-gradient(45deg, #f8f8f8, #e0e0e0);
+    color: #ffc5c5;
+}
+
+body.dark-theme {
+    background: linear-gradient(45deg, #1e1e1e, #3b3b3b);
+    color: #ddd;
+}
+
+/* Default Colorful Theme with animation */
+body.colorful-theme {
+    color: white;
+    animation: colorChange 10s infinite alternate, rainbowAnimation 10s infinite alternate; 
+}
+
+/* Rainbow Background Animation */
+@keyframes rainbowAnimation {
+    0% { background: linear-gradient(45deg, #ff6f61, #f8e71c, #50e3c2, #4a90e2); }
+    25% { background: linear-gradient(45deg, #ff6f61, #8e44ad, #2ecc71, #3498db); }
+    50% { background: linear-gradient(45deg, #e74c3c, #f39c12, #1abc9c, #9b59b6); }
+    75% { background: linear-gradient(45deg, #9b59b6, #e67e22, #16a085, #2980b9); }
+    100% { background: linear-gradient(45deg, #ff6f61, #f8e71c, #50e3c2, #4a90e2); }
+}
+
+/* Color Changing Animation for Text */
+@keyframes colorChange {
+    0% { color: #ff6f61; }
+    25% { color: #f39c12; }
+    50% { color: #8e44ad; }
+    75% { color: #3498db; }
+    100% { color: #ff6f61; }
+}
+
+/* Clock */
+.clock #time {
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: inherit;
+    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Date */
+.date #date {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-top: 10px;
+    display: block;
+    color: inherit;
+}
+
+/* Country */
+.country #country {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 10px;
+    color: inherit;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 678px) {
+    .clock-container {
+        padding: 20px;
+        width: 100%; 
+        max-width: 100%; 
+    }
+
+    .clock #time {
+        font-size: 3rem;
+    }
+
+    .date #date {
+        font-size: 1.5rem;
+    }
+
+    .country #country {
+        font-size: 1.2rem;
+    }
+
+    select {
+        padding: 8px;
+        font-size: 0.9rem;
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+}
+
